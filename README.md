@@ -1,21 +1,18 @@
+````markdown
 # Weather CLI App
 
-A simple command-line interface (CLI) application to retrieve weather information using the OpenWeatherMap API.
-
-## Prerequisites
-
-Before running the Weather CLI App, ensure you have the following installed:
-
-- [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+A simple command-line interface (CLI) application to get weather information.
 
 ## Installation
+
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/3BIK8/weather-cli-app.git
+   git clone https://github.com/your-username/weather-cli-app.git
    ```
+````
 
 2. Navigate to the project directory:
 
@@ -31,66 +28,58 @@ Before running the Weather CLI App, ensure you have the following installed:
 
 ## Usage
 
-### Current Weather
-
-Get the current weather for a city:
+Run the following command in the terminal:
 
 ```bash
-node weather-cli.js current <city> [-u, --unit <unit>]
+node weather-cli.js <command> [options]
 ```
 
-Example:
+### Commands
 
-```bash
-node weather-cli.js current London -u metric
-```
+- `current <city>` (Alias: `c`): Get current weather for a city.
 
-### Weather Forecast
+  Options:
 
-Get the weather forecast for a city:
+  - `-u, --unit <unit>`: Temperature unit (Celsius or Fahrenheit). Default is `metric`.
 
-```bash
-node weather-cli.js forecast <city> [-u, --unit <unit>]
-```
+  Example:
 
-Example:
+  ```bash
+  node weather-cli.js current Paris -u imperial
+  ```
 
-```bash
-node weather-cli.js forecast Paris -u imperial
-```
+- `forecast <city>` (Alias: `f`): Get weather forecast for a city.
 
-### Detailed Weather Forecast
+  Options:
 
-Get a detailed weather forecast for a city:
+  - `-u, --unit <unit>`: Temperature unit (Celsius or Fahrenheit). Default is `metric`.
 
-```bash
-node weather-cli.js detailed-forecast <city> [-u, --unit <unit>]
-```
+  Example:
 
-Example:
+  ```bash
+  node weather-cli.js forecast London
+  ```
 
-```bash
-node weather-cli.js detailed-forecast Berlin -u metric
-```
+- `detailed-forecast <city>` (Alias: `df`): Get detailed weather forecast for a city.
 
-### Detailed Current Weather
+  Options:
 
-Get detailed current weather for a city:
+  - `-u, --unit <unit>`: Temperature unit (Celsius or Fahrenheit). Default is `metric`.
 
-```bash
-node weather-cli.js detailed-current <city> [-u, --unit <unit>]
-```
+  Example:
 
-Example:
+  ```bash
+  node weather-cli.js detailed-forecast Berlin -u imperial
+  ```
 
-```bash
-node weather-cli.js detailed-current NewYork -u imperial
-```
+- `detailed-current <city>` (Alias: `dc`): Get detailed current weather for a city.
 
-## ASCII Art
+  Options:
 
-Run the Weather CLI App without any command to see the ASCII art and available commands:
+  - `-u, --unit <unit>`: Temperature unit (Celsius or Fahrenheit). Default is `metric`.
 
-```bash
-node weather-cli.js
-```
+  Example:
+
+  ```bash
+  node weather-cli.js detailed-current Madrid
+  ```
