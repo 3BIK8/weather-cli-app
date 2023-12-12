@@ -188,6 +188,7 @@ program.version("1.0.0").description("Weather CLI App");
 
 program
 	.command("current <city>")
+	.alias("c")
 	.option(
 		"-u, --unit <unit>",
 		"Temperature unit (Celsius or Fahrenheit)",
@@ -202,6 +203,7 @@ program
 
 program
 	.command("forecast <city>")
+	.alias("f")
 	.option(
 		"-u, --unit <unit>",
 		"Temperature unit (Celsius or Fahrenheit)",
@@ -220,6 +222,7 @@ program
 
 program
 	.command("detailed-forecast <city>")
+	.alias("df")
 	.option(
 		"-u, --unit <unit>",
 		"Temperature unit (Celsius or Fahrenheit)",
@@ -240,6 +243,7 @@ program
 
 program
 	.command("detailed-current <city>")
+	.alias("dc")
 	.option(
 		"-u, --unit <unit>",
 		"Temperature unit (Celsius or Fahrenheit)",
